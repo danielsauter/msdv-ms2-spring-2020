@@ -1,0 +1,31 @@
+* {
+  /* basic css reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 11pt;
+  background-color: #ced2d5;
+  color: #231f20;
+
+  margin: 2rem;
+}
+
+button {
+  font-size: inherit;
+  border: 0;
+  background: transparent;
+  appearance: none;
+}
+
+.button-component {
+  border-bottom: 2px solid #231f20;
+  padding: 0.5em 0;
+}
+.button-component:first-of-type {
+  border-top: 2px solid #231f20;
+}

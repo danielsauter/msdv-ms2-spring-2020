@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Example Bar Chart</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>{{ pageTitle }}</h1>
+      <h2>{{ pageSubTitle}}</h2>
+
+      <br />
+
+      Change first bar value: <input type="text" v-model="barData[0].value" />
+
+      <br />
+      <br />
+
+      <svg ref="chart" :width="chartWidth" :height="chartHeight">
+        <g v-for="(d,i) in barData">
+          <rect
+            width="20"
+            v-bind:height="getBarHeight(d.value)"
+            v-bind:x="i * spacing"
+            v-bind:y="chartHeight - getBarHeight(d.value)"
+            v-bind:fill="d.color"
+          />
+          <text
+            v-bind:x="i * spacing"
+            :y="chartHeight - getBarHeight(d.value) - 10"
+            fill="black"
+          >
+            {{d.value}}
+          </text>
+        </g>
+      </svg>
+
+      <br />
+      <br />
+
+      This does not render as HTML, instead it prints as text:
+      <br />
+      <span class="example-box">{{ paragraph }}</span>
+
+      <br />
+      <br />
+
+      This uses the v-html directive to render as HTML:
+      <br />
+      <span class="example-box" v-html="paragraph"></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

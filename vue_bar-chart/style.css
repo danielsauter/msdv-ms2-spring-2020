@@ -1,0 +1,28 @@
+* {
+  /* basic css reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 11pt;
+  background-color: #ced2d5;
+  color: #231f20;
+
+  margin: 2rem;
+}
+
+rect {
+  transition: 0.5s ease all;
+}
+
+span.example-box {
+  display: inline-block;
+  /* border: 1px solid #231f20; */
+  margin: 0.5em auto;
+  padding: 0.5em;
+  background: #fff;
+}

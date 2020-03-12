@@ -1,0 +1,16 @@
+{
+  "name": "node_json-response",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fetch-data": "node ./utils/fetch-data.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}

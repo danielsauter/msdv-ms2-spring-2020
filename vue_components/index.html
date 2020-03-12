@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Example Components</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div style="max-width:600px;">
+        <vue-button
+          v-for="(item,key) in dropDownOptions"
+          :key="key"
+          :text="item.value"
+          :color="item.color"
+        >
+        </vue-button>
+      </div>
+    </div>
+
+    <!-- Template Code for our Vue Component -->
+    <script type="text/x-template" id="vue-button-template">
+      <div class="button-component">
+      <button href="#" v-on:click="toggle">
+        {{ /* Ternary Operator */ }}
+        {{ /* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator */ }}
+        {{ isVisible ? '- Hide' : '+ ' + text }}
+      </button>
+      <div v-if="isVisible" style="padding:0.5em 0;">
+        <h1 v-bind:style="{ color: color, paddingBottom: '0.15em' }">{{ text }}</h1>
+        <p>Voluptatem quia incidunt odio placeat totam iste aperiam. Animi quo rerum explicabo et voluptatem. Rerum et atque quisquam sed et. Optio non similique consequatur unde. Qui et ex voluptatibus omnis possimus. Optio dolore labore at molestiae.</p>
+        <p>Molestiae consequuntur dolorem eum recusandae aliquid eos. Officia dolorum vero sit eligendi sed illum praesentium et. Minima fuga et debitis qui.</p>
+      </div>
+      </div>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
