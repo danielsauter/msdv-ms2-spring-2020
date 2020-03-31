@@ -1,10 +1,11 @@
 const fs = require("fs");
 
-async function writeJSON({ json, filepath } = {}) {
+async function save_data({ json, filepath } = {}) {
   if (!filepath || !json) {
-    let err = `Could not write file.
-JSON is ${json}
-Filepath is ${filepath}`;
+    let err = `Could not write file.\n`;
+    err += `JSON is ${json}\n`;
+    err += `Filepath is ${filepath}`;
+
     throw new Error(err);
     return false;
   }
@@ -15,4 +16,4 @@ Filepath is ${filepath}`;
   });
 }
 
-module.exports = writeJSON;
+module.exports = save_data;
