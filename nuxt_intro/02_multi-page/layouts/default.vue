@@ -1,12 +1,15 @@
 <template>
   <div class="default_container">
     <nav>
+      <MyLogo/>
       <nuxt-link to="/" class="button--green">Home</nuxt-link>
       <nuxt-link to="/about" class="button--green">About</nuxt-link>
     </nav>
+
     <nuxt />
+
     <div style="margin-top:3rem">
-      <form  v-on:submit="search">
+      <form v-on:submit="search">
       <input type="text" ref="searchfield"/>
       <input value="Search" type="submit"/>
     </form>
@@ -15,7 +18,17 @@
 </template>
 
 <script>
+import MyLogo from '../components/Logo.vue';
+
 export default {
+  components: {
+    MyLogo
+  },
+  data(){
+    return {
+      logotext: 'My Thesis Project'
+    }
+  },
   methods: {
     search(e){
       e.preventDefault();
