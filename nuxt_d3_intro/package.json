@@ -1,5 +1,5 @@
 {
-  "name": "02_multi-page",
+  "name": "nuxt_d3_intro",
   "version": "1.0.0",
   "description": " ",
   "author": "Zach Krall",
@@ -8,11 +8,13 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "test": "echo testing"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "d3": "^5.15.1",
+    "element-ui": "^2.4.11",
+    "nuxt": "^2.0.0",
+    "raw-loader": "^4.0.0"
   },
   "devDependencies": {}
 }

@@ -24,14 +24,13 @@ export default {
 </script>
 
 <style>
-body{
-  font-family:sans-serif;
-}
 .container{
   margin:0 auto;
   padding-top:2rem;
   width:100%;
   max-width:700px;
+
+  font-family:sans-serif;
 }
 .measure {
   max-width: 30em;

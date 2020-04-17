@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <Map/>
+  <div id="map_viz">
+    <WorldMap/>
   </div>
 </template>
 
 <script>
-import Map from '@/assets/map.svg';
+import WorldMap from '@/assets/map.svg';
 
 export default {
   name: 'Viz',
   components: {
-    Map
+    WorldMap
   }
 }
 </script>

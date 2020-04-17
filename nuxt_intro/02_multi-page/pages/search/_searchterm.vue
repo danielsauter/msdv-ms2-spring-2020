@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>You searched for: {{ this.$route.params.query }}</h1>
+    <h1>You searched for: {{ this.$route.params.searchterm }}</h1>
   </div>
 </template>
 
