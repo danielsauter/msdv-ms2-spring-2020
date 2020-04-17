@@ -1,5 +1,6 @@
 <template>
   <div class="barchartcontainer" ref="container">
+    Chart Height:
     <div style="display:flex;margin:0;padding:0;">
       <input type="range" min="200" max="600" v-model="height" class="slider" id="myRange">
       <span style="margin-left:0.5em">{{height}}</span>
